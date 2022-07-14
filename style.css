@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-color: #000314;
+  --blur-color: #00B2FF;
+  --text-gradient: linear-gradient(90deg, #52CBFF 0%, #0075FF 90%);
+  font-size: 62.5%;
+}
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+section {
+  width: min(100vw, 1216px);
+}
+/* NAVIGATION */
+
+nav {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav::after {
+  content: "";
+  position: absolute;
+  width: 50.3rem;
+  height: 50.3rem;
+  border-radius: 50%;
+  background-color: var(--blur-color);
+  opacity: 15%;
+  filter: blur(150px);
+  top: -32.3rem;
+  z-index: -1;
+}
+nav a + a {
+  margin-left: 3.2rem;
+}
+nav a {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 130%;
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 0%;
+  background-color: #fff;
+  bottom: -0.4rem;
+  transition: width 200ms;
+}
+nav a:hover::after {
+  width: 100%;
+}
+nav #logomarca {
+  width: 5.2rem;
+  height: 5.2rem;
+  margin: 0 8.4rem 0 8.4rem;
+  cursor: pointer;
+}
+
+/* SECTION HOME */
+
+section#section-home {
+  padding: 89px 38px 89px 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#informations-home {
+  position: relative;
+  width: 428px;
+}
+#informations-home::after {
+  content: "";
+  position: absolute;
+  width: 369px;
+  height: 369px;
+  border-radius: 50%;
+  background-color: var(--blur-color);
+  opacity: 12%;
+  filter: blur(150px);
+  bottom: 1px;
+  z-index: -1;
+}
+#informations-home h3 {
+  background-image: var(--text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+#informations-home h1 {
+  color: #fff;
+  font-size: 6.2rem;
+  font-weight: 500;
+  line-height: 110%;
+  margin: 12px 0 38px 20px;
+}
+#informations-home p {
+  color: #fff;
+  margin-bottom: 24px;
+  font-size: 1.6rem;
+}
+#informations-home #location {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+}
+#logomarca-home img {
+  width: 38px;
+  height: 38px;
+  margin-right: 90px;
+}
+#avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#avatar::after {
+  content: "";
+  position: absolute;
+  width: 302px;
+  height: 302px;
+  border-radius: 50%;
+  background: linear-gradient(141.1deg, #00B2FF 30.31%, #081976 87.04%);
+  z-index: -1;
+}
+#avatar img {
+  width: 292px;
+  height: 292px;
+}
+
+/* TECHS */
+
+section#techs {
+  padding-block: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#techs #content-techs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+#techs #content-techs h3 {
+  background-image: var(--text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+#techs #content-techs #techs-icons {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+#techs #content-techs #techs-icons svg {
+  width: 38px;
+}
+#techs #content-techs #techs-icons svg:nth-child(4) {
+  width: 34px;
+}
+#techs #content-techs #techs-icons svg:nth-child(5) {
+  width: 42px;
+}
+
+/* PROJECTS */
+
