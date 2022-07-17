@@ -20,10 +20,15 @@ body {
   flex-direction: column;
   align-items: center;
   scroll-behavior: smooth;
+  overflow: overlay;
 }
 a {
   text-decoration: none;
   cursor: pointer;
+}
+button {
+  border: none;
+  background: none;
 }
 section {
   width: min(100vw, 1216px);
@@ -109,7 +114,7 @@ section#section-home {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 #informations-home h1 {
@@ -207,7 +212,8 @@ section#techs {
 /* PROJECTS */
 
 section#projects {
-  padding: 0 39px;
+  position: relative;
+  padding: 0 38px;
   margin-block: 100px;
 }
 section#projects h3 {
@@ -218,29 +224,48 @@ section#projects h3 {
   font-weight: 600;
   font-size: 20px;
 }
-#cards-projects {
+#slider {
   margin-top: 52px;
-  padding-inline: 32px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 58px;
+  width: 100%;
+  height: 500px;
+  padding-inline: 8px;
+  padding-block: 8px;
+  overflow: hidden;
 }
-#cards-projects .card {
-  width: 472px;
-  height: 540px;
+#cards-slides {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 8px 8px 8px;
+  width: 1648px;
+  transition: margin-left 1s ease;
+}
+#slider .card {
+  width: 370px;
   background-color: #0B0F25;
-  border-radius: 24px;
-  box-shadow: 4px 4px 12px #262C4E;
-  padding: 38px 38px 32px 38px;
-  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 12px 1px rgba(0,178,255,0.21); 
+  box-shadow: 0px 0px 12px 1px rgba(0,178,255,0.21);
+  border-radius: 12px;
+  padding: 32px 38px 32px 38px;
+  transition: all .4s ease;
+}
+#slider .card:hover {
+  transform: translateY(-8px);
+  -webkit-box-shadow: 0px 2px 12px 1px rgba(0,178,255,0.22); 
+  box-shadow: 0px 2px 12px 1px rgba(0,178,255,0.22);
+}
+#slider .card + .card {
+  margin-left: 42px;
 }
 .card .presentation {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 30px;
 }
 .card .presentation .number {
-  font-size: 13rem;
+  font-size: 10rem;
   font-weight: 500;
   background: linear-gradient(180deg, #026a9e 22.54%, #0B0F25 85.65%);
   -webkit-background-clip: text;
@@ -248,8 +273,7 @@ section#projects h3 {
   background-clip: text;
 }
 .card .presentation img {
-  width: 310px;
-  height: 206px;
+  width: 220px;
   box-shadow: 0px 0px 8px 0px #ffffff23;
   border-radius: 24px;
 }
@@ -257,41 +281,48 @@ section#projects h3 {
   text-align: center;
   font-weight: 500;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 32px 0 28px 0;
 }
 .card .description-project {
-  color: #fff;
-  font-size: 1.6rem;
+  color: rgb(214, 214, 214);
+  font-size: 1.4rem;
   line-height: 140%;
   margin-bottom: 28px;
 }
 .card .view-project {
-  padding-inline: 20px;
-  padding-block: 12px;
+  padding-inline: 18px;
+  padding-block: 10px;
   border-radius: 24px;
   background: linear-gradient(90deg, #005D8A 2.6%, #0B1578 93.23%);
   text-align: center;
   border: none;
   float: right;
+  transition: all .2s ease;
 }
 .card .view-project a {
   color: #fff;
-  font-weight: 600;
+  font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   font-family: 'Montserrat';
+}
+.card .view-project:hover {
+  transform: translateX(2px);
+  -webkit-box-shadow: 0px 2px 5px 3px rgba(173, 173, 173, 0.116); 
+  box-shadow: 0px 2px 5px 3px rgba(173, 173, 173, 0.116);
 }
 #projects .view-projects {
   margin-top: 58px;
-  margin-left: 38%;
+  margin-left: 41%;
   padding-inline: 20px;
   padding-block: 12px;
   border-radius: 24px;
   background: linear-gradient(90deg, #005D8A 2.6%, #0B1578 93.23%);
   text-align: center;
   border: none;
+  transition: all .2s ease;
 }
 #projects .view-projects a {
   color: #fff;
@@ -300,4 +331,41 @@ section#projects h3 {
   align-items: center;
   gap: 14px;
   font-family: 'Montserrat';
+}
+#projects .view-projects:hover {
+  margin-left: 41.3%;
+  -webkit-box-shadow: 0px 2px 5px 3px rgba(173, 173, 173, 0.116); 
+  box-shadow: 0px 2px 5px 3px rgba(173, 173, 173, 0.116);
+}
+#projects #prev,
+#projects #next {
+  background: rgb(189, 189, 189);
+  position: absolute;
+  color: #000;
+  padding: 12px 10px 12px 10px;
+  border-radius: 50%;
+  line-height: 0;
+  cursor: pointer;
+  transition: all .3s ease-out;
+}
+#projects #prev {
+  top: 43%;
+  left: -1%;
+}
+#projects #prev svg {
+  transform: rotate(180deg);
+}
+#projects #next {
+  top: 45%;
+  left: 98%;
+}
+#projects #prev:hover {
+  top: 42%;
+  -webkit-box-shadow: 0px 3px 16px 3px rgba(173, 173, 173, 0.363); 
+  box-shadow: 0px 3px 16px 3px rgba(173, 173, 173, 0.363);
+}
+#projects #next:hover {
+  top: 44%;
+  -webkit-box-shadow: 0px 3px 16px 3px rgba(173, 173, 173, 0.363); 
+  box-shadow: 0px 3px 16px 3px rgba(173, 173, 173, 0.363);
 }
