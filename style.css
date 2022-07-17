@@ -9,6 +9,39 @@
   --text-gradient: linear-gradient(90deg, #52CBFF 0%, #0075FF 90%);
   font-size: 62.5%;
 }
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+body::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 1px solid var(--bg-color);
+  border-radius: 50px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+body::-webkit-scrollbar-thumb:active {
+  background: #ffffff;
+}
+body::-webkit-scrollbar-track {
+  background: var(--bg-color);
+  border: 0px none #ffffff;
+  border-radius: 24px;
+}
+body::-webkit-scrollbar-track:hover {
+  background: var(--bg-color);
+}
+body::-webkit-scrollbar-track:active {
+  background: var(--bg-color);
+}
+body:-webkit-scrollbar-corner {
+  background: transparent;
+}
 body {
   position: relative;
   width: 100%;
@@ -20,7 +53,7 @@ body {
   flex-direction: column;
   align-items: center;
   scroll-behavior: smooth;
-  overflow: overlay;
+  overflow: auto;
 }
 a {
   text-decoration: none;
@@ -32,6 +65,61 @@ button {
 }
 section {
   width: min(100vw, 1216px);
+}
+
+/* PRELOADER */
+
+#preloader {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-color);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#preloader #logomarca-loader {
+  width: 56px;
+  height: 56px;
+  position: relative;
+  animation: motion-logo 4s ease-in-out;
+}
+@keyframes motion-logo {
+  50% {
+    transform: translateY(-16px);
+    opacity: 100%;
+  } 75% {
+    transform: translateY(0);
+    opacity: 70%;
+  } 100% {
+    transform: translateY(-800px);
+    opacity: 0%;
+  }
+}
+#preloader::before {
+  content: "";
+  position: absolute;
+  width: 208px;
+  height: 384px;
+  background: linear-gradient(180deg, rgba(0, 179, 218, 0.17) -0.09%, rgba(0, 179, 218, 0) 100%);
+  filter: blur(15px);
+  margin-top: -40%;
+  opacity: 70%;
+}
+#preloader::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 8px;
+  background: #8AEAFF;
+  border-radius: 50%;
+  opacity: 70%;
+  filter: blur(30px);
+  margin-top: 190px;
+}
+#content {
+  display: none;
 }
 /* NAVIGATION */
 

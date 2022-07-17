@@ -2,12 +2,20 @@ const greetingMessage = document.getElementById('greeting')
 const btnPrev = document.getElementById('prev')
 const btnNext = document.getElementById('next')
 const slider = document.getElementById('cards-slides')
+const content = document.getElementById('content')
+const preloader = document.getElementById('preloader')
 
 setGreeting()
 
 btnPrev.addEventListener('click', moveInRightDirectionSlider)
 btnNext.addEventListener('click', moveInLeftDirectionSlider)
 
+function preLoading() {
+  preloader.style.display = "none"
+  content.style.display = "block"
+}
+
+setTimeout(preLoading, 3800);
 
 /* Function whitch set this greeting in home section */
 function setGreeting() {
