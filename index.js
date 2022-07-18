@@ -3,6 +3,7 @@ const btnPrev = document.getElementById('prev')
 const btnNext = document.getElementById('next')
 const slider = document.getElementById('cards-slides')
 const content = document.getElementById('content')
+const navigationBar = document.getElementById('navigation')
 const preloader = document.getElementById('preloader')
 
 setGreeting()
@@ -13,6 +14,7 @@ btnNext.addEventListener('click', moveInLeftDirectionSlider)
 function preLoading() {
   preloader.style.display = "none"
   content.style.display = "block"
+  navigationBar.style.display = "flex"
 }
 
 setTimeout(preLoading, 3800);
