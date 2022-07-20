@@ -6,10 +6,48 @@ const content = document.getElementById('content')
 const navigationBar = document.getElementById('navigation')
 const preloader = document.getElementById('preloader')
 
-setGreeting()
 
-btnPrev.addEventListener('click', moveInRightDirectionSlider)
-btnNext.addEventListener('click', moveInLeftDirectionSlider)
+/* Timeline for animation GSAP */
+
+let tl = gsap.timeline()
+  tl
+  .from('.anim-nav', {
+    duration: 2,
+    stagger: {each: 0.2},
+    y: 300,
+    opacity: 0,
+    ease: "back.out(1)",
+    delay: 3.8,
+  })
+  .from('.anim-info', {
+    duration: 2,
+    stagger: {each: 0.2},
+    y: 200,
+    opacity: 0,
+    ease: "back.out(1.7)",
+  }, '-=2.2')
+  .from('#logomarca-home', {
+    duration: 2,
+    y: 200,
+    opacity: 0,
+    ease: "back.out(1.4)",
+  }, '-=2.1')
+  .from('#avatar', {
+    duration: 2,
+    y: 200,
+    opacity: 0,
+    ease: "back.out(1.4)",
+  }, '-=2.1')
+  .from('.anim-tech', {
+    duration: 2,
+    y: 100,
+    opacity: 0,
+    stagger: {each: 0.2},
+    ease: "back.out(1.4)",
+  }, '-=1.8')
+  
+
+/* Function that load the sreen load */
 
 function preLoading() {
   preloader.style.display = "none"
@@ -20,6 +58,7 @@ function preLoading() {
 setTimeout(preLoading, 3800);
 
 /* Function whitch set this greeting in home section */
+
 function setGreeting() {
   const date = new Date()
   const hour = date.getHours()
@@ -33,9 +72,22 @@ function setGreeting() {
   }
 }
 
+setGreeting()
+
+/* Slider scritps */
+
+btnPrev.addEventListener('click', moveInRightDirectionSlider)
+btnNext.addEventListener('click', moveInLeftDirectionSlider)
+const shadow = document.getElementById('shadow')
+
 function moveInLeftDirectionSlider() {
   slider.style.marginLeft = '-500px'
+  shadow.style.opacity = 0
 }
 function moveInRightDirectionSlider() {
   slider.style.marginLeft = '0'
+  setTimeout(hideShowShadow, 750);
+}
+function hideShowShadow() {
+  shadow.style.opacity = 100
 }

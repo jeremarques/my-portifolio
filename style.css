@@ -128,7 +128,7 @@ nav {
   position: fixed;
   background: #20002c;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #000314, #00031400);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #000314 25%, #00031400 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to bottom, #000314 30%, #00031410 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   z-index: 20;
 }
 body::after {
@@ -291,6 +291,10 @@ section#techs {
 }
 #techs #content-techs #techs-icons svg {
   width: 38px;
+  transition: transform .4s ease;
+}
+#techs #content-techs #techs-icons svg:hover {
+  transform: translateY(-5px);
 }
 #techs #content-techs #techs-icons svg:nth-child(4) {
   width: 34px;
@@ -330,6 +334,13 @@ section#projects h3 {
   padding: 10px 8px 8px 8px;
   width: 1648px;
   transition: margin-left 1s ease;
+}
+#cards-slides #shadow {
+  position: absolute;
+  margin-left: 1040px;
+  background-image: linear-gradient(to left, #000314d5 10%, #00031400 100%);
+  width: 100px;
+  height: 100%;
 }
 #slider .card {
   width: 370px;
