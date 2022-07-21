@@ -37,14 +37,14 @@ let tl = gsap.timeline()
     y: 200,
     opacity: 0,
     ease: "back.out(1.4)",
-  }, '-=2.1')
+  }, '-=2.2')
   .from('.anim-tech', {
     duration: 2,
     y: 100,
     opacity: 0,
     stagger: {each: 0.2},
     ease: "back.out(1.4)",
-  }, '-=1.8')
+  }, '-=2.0')
   
 
 /* Function that load the sreen load */
@@ -82,12 +82,11 @@ const shadow = document.getElementById('shadow')
 
 function moveInLeftDirectionSlider() {
   slider.style.marginLeft = '-500px'
-  shadow.style.opacity = 0
+  setTimeout(() => {
+    shadow.style.opacity = 0
+  }, 700);
 }
 function moveInRightDirectionSlider() {
   slider.style.marginLeft = '0'
-  setTimeout(hideShowShadow, 750);
-}
-function hideShowShadow() {
   shadow.style.opacity = 100
 }

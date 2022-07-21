@@ -325,6 +325,9 @@ section#projects h3 {
   padding-inline: 8px;
   padding-block: 8px;
   overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 #cards-slides {
   display: flex;
@@ -335,12 +338,12 @@ section#projects h3 {
   width: 1648px;
   transition: margin-left 1s ease;
 }
-#cards-slides #shadow {
+#slider #shadow {
   position: absolute;
-  margin-left: 1040px;
   background-image: linear-gradient(to left, #000314d5 10%, #00031400 100%);
   width: 100px;
   height: 100%;
+  margin-left: 1028px;
 }
 #slider .card {
   width: 370px;
