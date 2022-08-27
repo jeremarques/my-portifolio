@@ -30,9 +30,9 @@
     <meta property="og:image" content="assets/preloader-ogimage.png">
   </head>
   <body>
-    <div id="preloader">
-      <img id="logomarca-loader" src="./assets/logo-editable.svg" alt="Logomarca Jeremias Marques">
-    </div>
+      <div id="preloader">
+        <img id="logomarca-loader" src="./assets/logo-editable.svg" alt="Logomarca Jeremias Marques">
+      </div>
     <nav id="navigation">
       <a class="anim-nav" href="#home">INÍCIO</a>
       <a class="anim-nav" href="#projects">PROJETOS</a>
@@ -43,7 +43,7 @@
     <div id="content">
       <section id="home">
         <div id="informations-home">
-          <h3  class="anim-info" id="greeting"></h3>
+          <h3  class="anim-info" id="greeting">Olá! Eu sou</h3>
           <h1 class="anim-info" >Jeremias<br>Marques</h1>
           <p class="anim-info" >Sou desenvolvedor front-end e um amante da tecnologia!</p>
           <div class="anim-info" id="location">
@@ -75,7 +75,7 @@
         <div id="content-techs">
           <h3 class="anim-tech">TECNOLOGIAS</h3>
           <div class="anim-tech" id="techs-icons">
-            <svg title="JavaScript" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg title="JavaScript" viewBox="0 0 50 50" fill="#fff" xmlns="http://www.w3.org/2000/svg">
               <path d="M6.25 43.75V6.25H43.75V43.75H6.25Z" fill="white"/>
               <path d="M30.7687 34.3198C31.4896 35.4906 32.2729 36.6125 33.9323 36.6125C35.326 36.6125 36.0573 35.9198 36.0573 34.9614C36.0573 33.8146 35.301 33.4073 33.7677 32.7396L32.9271 32.3812C30.501 31.3521 28.8875 30.0625 28.8875 27.3385C28.8875 24.8281 30.8094 22.9177 33.8125 22.9177C35.951 22.9177 37.4875 23.6583 38.5958 25.5979L35.9771 27.2719C35.401 26.2427 34.7781 25.8375 33.8125 25.8375C32.8271 25.8375 32.2031 26.4594 32.2031 27.2719C32.2031 28.276 32.8281 28.6823 34.2708 29.3042L35.1114 29.6625C37.9708 30.8802 39.5833 32.1239 39.5833 34.9198C39.5833 37.9323 37.2042 39.5833 34.0104 39.5833C30.8864 39.5833 29.1125 38.0156 28.125 36.075L30.7687 34.3198ZM18.7 34.4052C19.2271 35.3489 20.0281 36.075 21.1802 36.075C22.2823 36.075 22.9167 35.6396 22.9167 33.9469V22.9167H26.3885V34.4802C26.3885 37.9875 24.3542 39.5833 21.3833 39.5833C18.6989 39.5833 16.7614 37.7646 15.9719 36.075L18.7 34.4052Z" fill="#000314"/>
             </svg>
@@ -110,93 +110,53 @@
       </section>
       <section id="projects">
         <h3>MEUS PROJETOS</h3>
-        <div id="slider">
-          <div id="cards-slides">
-            <div class="card">
-              <div class="presentation">
-                <span class="number">1</span>
-                <img src="./assets/delltoro.png" alt="Imagem do projeto DellToro Steakhouse" class="img-project">
-              </div>
+        <div class="projects-box">
+          <div class="projects">
+            <div class="description-of-projects">
+              <svg class="open-new-window" width="20" height="20" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.915 22.9643C13.343 23.5635 13.365 24.513 13.9643 25.085C14.5635 25.657 15.513 25.635 16.085 25.0357L13.915 22.9643ZM37.4996 1.96512C37.4803 1.13692 36.7933 0.481144 35.9651 0.500404L22.4688 0.814273C21.6406 0.833533 20.9848 1.52054 21.0041 2.34874C21.0233 3.17694 21.7103 3.83272 22.5385 3.81346L34.5353 3.53447L34.8143 15.5312C34.8335 16.3594 35.5205 17.0152 36.3487 16.9959C37.1769 16.9767 37.8327 16.2897 37.8135 15.4615L37.4996 1.96512ZM16.085 25.0357L37.085 3.03571L34.915 0.964285L13.915 22.9643L16.085 25.0357Z" fill="white"/>
+                <rect x="2" y="11" width="26" height="26" rx="6" stroke="white" stroke-width="4"/>
+              </svg>
               <h4 class="title-project">DellToro Steakhouse</h4>
-              <p class="description-project">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida ipsum sed egestas egestas at enim. Diam tortor proin eu morbi nunc. Viverra sed eu arcu, enim, enim, adipiscing neque.
-              </p>
-              <button class="view-project">
-                <a href="https://jeremarques.github.io/dell-toro-steakhouse" target="_blank">VER PROJETO 
-                  <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM16.5303 6.53033C16.8232 6.23744 16.8232 5.76256 16.5303 5.46967L11.7574 0.6967C11.4645 0.403807 10.9896 0.403807 10.6967 0.6967C10.4038 0.989593 10.4038 1.46447 10.6967 1.75736L14.9393 6L10.6967 10.2426C10.4038 10.5355 10.4038 11.0104 10.6967 11.3033C10.9896 11.5962 11.4645 11.5962 11.7574 11.3033L16.5303 6.53033ZM1 6.75L16 6.75L16 5.25L1 5.25L1 6.75Z" fill="white"/>
-                  </svg>
-                </a>
-              </button>
-            </div>
-            <div class="card">
-              <div class="presentation">
-                <span class="number">2</span>
-                <img src="./assets/search-user.png" alt="Imagem do projeto DellToro Steakhouse" class="img-project">
-              </div>
-              <h4 class="title-project">Search User (Github API)</h4>
-              <p class="description-project">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida ipsum sed egestas egestas at enim. Diam tortor proin eu morbi nunc. Viverra sed eu arcu, enim, enim, adipiscing neque.
-              </p>
-              <button class="view-project">
-                <a href="https://jeremarques.github.io/search-user-with-github-api" target="_blank">VER PROJETO 
-                  <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM16.5303 6.53033C16.8232 6.23744 16.8232 5.76256 16.5303 5.46967L11.7574 0.6967C11.4645 0.403807 10.9896 0.403807 10.6967 0.6967C10.4038 0.989593 10.4038 1.46447 10.6967 1.75736L14.9393 6L10.6967 10.2426C10.4038 10.5355 10.4038 11.0104 10.6967 11.3033C10.9896 11.5962 11.4645 11.5962 11.7574 11.3033L16.5303 6.53033ZM1 6.75L16 6.75L16 5.25L1 5.25L1 6.75Z" fill="white"/>
-                  </svg>
-                </a>
-              </button>
-            </div>
-            <div class="card">
-              <div class="presentation">
-                <span class="number">3</span>
-                <img src="./assets/wire.png" alt="Imagem do projeto DellToro Steakhouse" class="img-project">
-              </div>
-              <h4 class="title-project">Lista de presença</h4>
-              <p class="description-project">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida ipsum sed egestas egestas at enim. Diam tortor proin eu morbi nunc. Viverra sed eu arcu, enim, enim, adipiscing neque.
-              </p>
-              <button class="view-project">
-                <a href="https://jeremarques.github.io/dell-toro-steakhouse" target="_blank">VER PROJETO 
-                  <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM16.5303 6.53033C16.8232 6.23744 16.8232 5.76256 16.5303 5.46967L11.7574 0.6967C11.4645 0.403807 10.9896 0.403807 10.6967 0.6967C10.4038 0.989593 10.4038 1.46447 10.6967 1.75736L14.9393 6L10.6967 10.2426C10.4038 10.5355 10.4038 11.0104 10.6967 11.3033C10.9896 11.5962 11.4645 11.5962 11.7574 11.3033L16.5303 6.53033ZM1 6.75L16 6.75L16 5.25L1 5.25L1 6.75Z" fill="white"/>
-                  </svg>
-                </a>
-              </button>
-            </div>
-            <div class="card">
-              <div class="presentation">
-                <span class="number">4</span>
-                <img src="./assets/cronometro.png" alt="Imagem do projeto DellToro Steakhouse" class="img-project">
-              </div>
-              <h4 class="title-project">Cronômetro</h4>
-              <p class="description-project">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida ipsum sed egestas egestas at enim. Diam tortor proin eu morbi nunc. Viverra sed eu arcu, enim, enim, adipiscing neque.
-              </p>
-              <button class="view-project">
-                <a href="https://jeremarques.github.io/timer" target="_blank">VER PROJETO 
-                  <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM16.5303 6.53033C16.8232 6.23744 16.8232 5.76256 16.5303 5.46967L11.7574 0.6967C11.4645 0.403807 10.9896 0.403807 10.6967 0.6967C10.4038 0.989593 10.4038 1.46447 10.6967 1.75736L14.9393 6L10.6967 10.2426C10.4038 10.5355 10.4038 11.0104 10.6967 11.3033C10.9896 11.5962 11.4645 11.5962 11.7574 11.3033L16.5303 6.53033ZM1 6.75L16 6.75L16 5.25L1 5.25L1 6.75Z" fill="white"/>
-                  </svg>
-                </a>
-              </button>
+              <p class="paragraph-project">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed porro vero quidem obcaecati hic, quas perferendis magnam voluptates. Excepturi quidem ducimus velit.</p>
             </div>
           </div>
-          <div style="transition: all .3s ease" id="shadow"></div>
+          <div class="projects">
+            <div class="description-of-projects">
+              <svg class="open-new-window" width="20" height="20" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.915 22.9643C13.343 23.5635 13.365 24.513 13.9643 25.085C14.5635 25.657 15.513 25.635 16.085 25.0357L13.915 22.9643ZM37.4996 1.96512C37.4803 1.13692 36.7933 0.481144 35.9651 0.500404L22.4688 0.814273C21.6406 0.833533 20.9848 1.52054 21.0041 2.34874C21.0233 3.17694 21.7103 3.83272 22.5385 3.81346L34.5353 3.53447L34.8143 15.5312C34.8335 16.3594 35.5205 17.0152 36.3487 16.9959C37.1769 16.9767 37.8327 16.2897 37.8135 15.4615L37.4996 1.96512ZM16.085 25.0357L37.085 3.03571L34.915 0.964285L13.915 22.9643L16.085 25.0357Z" fill="white"/>
+                <rect x="2" y="11" width="26" height="26" rx="6" stroke="white" stroke-width="4"/>
+              </svg>
+              <h4 class="title-project">Weather Website</h4>
+              <p class="paragraph-project">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed porro vero quidem obcaecati hic, quas perferendis magnam voluptates. Excepturi quidem ducimus velit.</p>
+            </div>
+          </div>
+          <div class="projects">
+            <div class="description-of-projects">
+              <svg class="open-new-window" width="20" height="20" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.915 22.9643C13.343 23.5635 13.365 24.513 13.9643 25.085C14.5635 25.657 15.513 25.635 16.085 25.0357L13.915 22.9643ZM37.4996 1.96512C37.4803 1.13692 36.7933 0.481144 35.9651 0.500404L22.4688 0.814273C21.6406 0.833533 20.9848 1.52054 21.0041 2.34874C21.0233 3.17694 21.7103 3.83272 22.5385 3.81346L34.5353 3.53447L34.8143 15.5312C34.8335 16.3594 35.5205 17.0152 36.3487 16.9959C37.1769 16.9767 37.8327 16.2897 37.8135 15.4615L37.4996 1.96512ZM16.085 25.0357L37.085 3.03571L34.915 0.964285L13.915 22.9643L16.085 25.0357Z" fill="white"/>
+                <rect x="2" y="11" width="26" height="26" rx="6" stroke="white" stroke-width="4"/>
+                </svg>
+              <h4 class="title-project">Search User of Github</h4>
+              <p class="paragraph-project">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed porro vero quidem obcaecati hic, quas perferendis magnam voluptates. Excepturi quidem ducimus velit.</p>
+            </div>
+          </div>
+          <div class="projects">
+            <div class="description-of-projects">
+              <svg class="open-new-window" width="20" height="20" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.915 22.9643C13.343 23.5635 13.365 24.513 13.9643 25.085C14.5635 25.657 15.513 25.635 16.085 25.0357L13.915 22.9643ZM37.4996 1.96512C37.4803 1.13692 36.7933 0.481144 35.9651 0.500404L22.4688 0.814273C21.6406 0.833533 20.9848 1.52054 21.0041 2.34874C21.0233 3.17694 21.7103 3.83272 22.5385 3.81346L34.5353 3.53447L34.8143 15.5312C34.8335 16.3594 35.5205 17.0152 36.3487 16.9959C37.1769 16.9767 37.8327 16.2897 37.8135 15.4615L37.4996 1.96512ZM16.085 25.0357L37.085 3.03571L34.915 0.964285L13.915 22.9643L16.085 25.0357Z" fill="white"/>
+                <rect x="2" y="11" width="26" height="26" rx="6" stroke="white" stroke-width="4"/>
+              </svg>
+              <h4 class="title-project">List of presence</h4>
+              <p class="paragraph-project">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed porro vero quidem obcaecati hic, quas perferendis magnam voluptates. Excepturi quidem ducimus velit.</p>
+            </div>
+          </div>
         </div>
-        <button id="prev">
-          <svg  width="15" height="10" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM16.5303 6.53033C16.8232 6.23744 16.8232 5.76256 16.5303 5.46967L11.7574 0.6967C11.4645 0.403807 10.9896 0.403807 10.6967 0.6967C10.4038 0.989593 10.4038 1.46447 10.6967 1.75736L14.9393 6L10.6967 10.2426C10.4038 10.5355 10.4038 11.0104 10.6967 11.3033C10.9896 11.5962 11.4645 11.5962 11.7574 11.3033L16.5303 6.53033ZM1 6.75L16 6.75L16 5.25L1 5.25L1 6.75Z" fill="black"/>
-            </svg>
-        </button>
-        <button id="next">
-          <svg width="15" height="10" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM16.5303 6.53033C16.8232 6.23744 16.8232 5.76256 16.5303 5.46967L11.7574 0.6967C11.4645 0.403807 10.9896 0.403807 10.6967 0.6967C10.4038 0.989593 10.4038 1.46447 10.6967 1.75736L14.9393 6L10.6967 10.2426C10.4038 10.5355 10.4038 11.0104 10.6967 11.3033C10.9896 11.5962 11.4645 11.5962 11.7574 11.3033L16.5303 6.53033ZM1 6.75L16 6.75L16 5.25L1 5.25L1 6.75Z" fill="black"/>
-            </svg>
-        </button>
+
         <button class="view-projects">
           <a href="https://jeremarques.github.io/dell-toro-steakhouse">VER MAIS PROJETOS 
-            <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM16.5303 6.53033C16.8232 6.23744 16.8232 5.76256 16.5303 5.46967L11.7574 0.6967C11.4645 0.403807 10.9896 0.403807 10.6967 0.6967C10.4038 0.989593 10.4038 1.46447 10.6967 1.75736L14.9393 6L10.6967 10.2426C10.4038 10.5355 10.4038 11.0104 10.6967 11.3033C10.9896 11.5962 11.4645 11.5962 11.7574 11.3033L16.5303 6.53033ZM1 6.75L16 6.75L16 5.25L1 5.25L1 6.75Z" fill="white"/>
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.803207 5.25C0.388994 5.25 0.0532074 5.58579 0.0532074 6C0.0532074 6.41421 0.388994 6.75 0.803207 6.75L0.803207 5.25ZM17.5338 6.53033C17.8267 6.23744 17.8267 5.76256 17.5338 5.46967L12.7608 0.6967C12.4679 0.403807 11.9931 0.403807 11.7002 0.6967C11.4073 0.989593 11.4073 1.46447 11.7002 1.75736L15.9428 6L11.7002 10.2426C11.4073 10.5355 11.4073 11.0104 11.7002 11.3033C11.9931 11.5962 12.4679 11.5962 12.7608 11.3033L17.5338 6.53033ZM0.803207 6.75L17.0035 6.75L17.0035 5.25L0.803207 5.25L0.803207 6.75Z" fill="white"/>
             </svg>
           </a>
         </button>
