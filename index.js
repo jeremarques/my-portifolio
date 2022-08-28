@@ -1,15 +1,15 @@
-const greetingMessage = document.getElementById('greeting')
-const btnPrev = document.getElementById('prev')
-const btnNext = document.getElementById('next')
-const slider = document.getElementById('cards-slides')
-const content = document.getElementById('content')
-const navigationBar = document.getElementById('navigation')
-const preloader = document.getElementById('preloader')
+const greetingMessage = document.getElementById('greeting');
+const btnPrev = document.getElementById('prev');
+const btnNext = document.getElementById('next');
+const slider = document.getElementById('cards-slides');
+const content = document.getElementById('content');
+const navigationBar = document.getElementById('navigation');
+const preloader = document.getElementById('preloader');
 
 
 /* Timeline for animation GSAP */
 
-let tl = gsap.timeline()
+let tl = gsap.timeline();
   tl
   .from('.anim-nav', {
     duration: 2,
@@ -47,11 +47,11 @@ let tl = gsap.timeline()
   }, '-=2.0')
 
 /* Function that load the sreen load */
-const body = document.querySelector('body')
+const body = document.querySelector('body');
 function preLoading() {
-  preloader.style.display = "none"
-  body.style.overflow = 'auto'
-  navigationBar.style.display = "flex"
-}
+  preloader.style.display = "none";
+  body.style.overflow = 'auto';
+  navigationBar.style.display = "flex";
+};
 
 setTimeout(preLoading, 3800);

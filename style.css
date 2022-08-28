@@ -72,6 +72,14 @@ button {
 section {
   width: min(100vw, 1216px);
 }
+section > h3 {
+  background-image: var(--text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 20px;
+}
 /* PRELOADER */
 
 #preloader {
@@ -236,6 +244,7 @@ section#home {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 500px;
 }
 #avatar::after {
   content: "";
@@ -311,15 +320,6 @@ section#projects {
   padding: 0 38px;
   margin-block: 100px;
 }
-section#projects h3 {
-  background-image: var(--text-gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 600;
-  font-size: 20px;
-}
-
 section#projects .projects-box {
   width: 100%;
   margin-top: 40px;
@@ -332,7 +332,10 @@ section#projects .projects-box .projects {
   max-width: 608px;
   height: 269px;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
+
 section#projects .projects-box .projects .description-of-projects {
   display: flex;
   flex-direction: column;
@@ -345,6 +348,13 @@ section#projects .projects-box .projects .description-of-projects {
   transition: all 0.2s ease;
   
 }
+.bg-projects {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  transition: all 0.4s ease;
+  z-index: -1;
+}
 .projects .description-of-projects h4,
 .projects .description-of-projects p, 
 .projects .description-of-projects svg {
@@ -355,33 +365,19 @@ section#projects .projects-box .projects .description-of-projects {
   margin-top: 32px;
   margin-bottom: 24px;
 }
-.projects .description-of-projects p {
-  font-size: 14px;
-}
 
 .projects .description-of-projects:hover {
   background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(0,0,0,1) 20%, rgba(0,3,25,0) 100%);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 20%, rgba(0, 0, 0, 0.226) 100%);
 }
 .projects .description-of-projects:hover h4,
 .projects .description-of-projects:hover p,
 .projects .description-of-projects:hover svg {
   opacity: 1;
 }
-
-.projects:nth-child(1) {
-  background: url(./assets/jeremarques.github.io_dell-toro-steakhouse_.png) top/cover no-repeat;
+.projects > a:hover .bg-projects {
+  transform: scale(1.05);
 }
-.projects:nth-child(2) {
-  background: url(./assets/jereweather.vercel.app_.png) top/cover no-repeat;
-}
-.projects:nth-child(3) {
-  background: url(./assets/jeremarques.github.io_search-user-with-github-api_.png) top/cover no-repeat;
-}
-.projects:nth-child(4) {
-  background: url(./assets/list-of-collaborators-jsx.vercel.app_.png) top/cover no-repeat;
-}
-
 #projects .view-projects {
   margin-top: 58px;
   margin-left: 41%;
@@ -405,4 +401,41 @@ section#projects .projects-box .projects .description-of-projects {
   margin-left: 41.3%;
   -webkit-box-shadow: 0px 2px 5px 3px rgba(173, 173, 173, 0.116); 
   box-shadow: 0px 2px 5px 3px rgba(173, 173, 173, 0.116);
+}
+
+/* ABOUT ME */
+
+#about-me {
+  padding: 0 38px;
+  margin-bottom: 100px;
+}
+#about-me .content-about-me {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 48px;
+}
+#about-me .text-about-me {
+  color: #fff;
+  line-height: 25px;
+  margin-top: 34px;
+}
+#about-me #avatar-about-me {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 40px;
+}
+#about-me #avatar-about-me::after {
+  content: "";
+  position: absolute;
+  width: 302px;
+  height: 302px;
+  border-radius: 50%;
+  background: linear-gradient(141.1deg, #00B2FF 30.31%, #081976 87.04%);
+  z-index: -1;
+}
+#about-me #avatar-about-me img {
+  width: 292px;
+  height: 292px;
+  margin-right: 5px;
 }
