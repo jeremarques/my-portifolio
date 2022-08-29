@@ -59,7 +59,7 @@ body {
   scroll-behavior: smooth;
 }
 section:target {
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 10rem;
 }
 a {
   text-decoration: none;
@@ -318,7 +318,8 @@ section#techs {
 
 section#projects {
   padding: 0 38px;
-  margin-block: 100px;
+  margin-top: 100px;
+  margin-bottom: 150px;
 }
 section#projects .projects-box {
   width: 100%;
@@ -438,4 +439,136 @@ section#projects .projects-box .projects .description-of-projects {
   width: 292px;
   height: 292px;
   margin-right: 5px;
+}
+
+/* CONTACT */
+
+#contact {
+  padding: 0 38px;
+  margin-bottom: 100px;
+  margin-top: 150px;
+}
+.content-contact {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+#contact p {
+  font-size: 18px;
+  color: #fff;
+  margin-top: 16px;
+  line-height: 24px;
+}
+#contact .social-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 42px;
+}
+#contact .social-links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+#contact .social-links a > #arrow-social-links {
+  transition: transform 0.4s ease;
+}
+#contact .social-links a:hover > #arrow-social-links {
+  transform: translateY(-4px);
+}
+#contact .logo-contact {
+  display: flex;
+  align-items: center;
+  width: min-content;
+  margin-top: 80px;
+  margin-left: 90px;
+} 
+#contact .logo-contact svg #logo-hover {
+  transition: transform 0.5s ease;
+}
+#contact .logo-contact:hover svg #logo-hover {
+  transform: translateY(-10px);
+}
+
+.form-contact form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.form-contact form label {  
+  color: #fff;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.form-contact form input {  
+  border: none;
+  border-radius: 8px;
+  width: min(auto, 480px);
+  height: 42px;
+  padding-inline: 20px;
+  margin-bottom: 24px;
+  font-family: 'Montserrat', sans-serif;
+}
+.form-contact form input::placeholder {
+  color: #939393;
+  font-family: 'Montserrat', sans-serif;
+}
+.form-contact form textarea {  
+  border: none;
+  border-radius: 8px;
+  width: min(auto, 480px);
+  padding-inline: 20px;
+  padding-top: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+.form-contact form button {  
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 20px;
+  width: 140px;
+  height: 38px;
+  color: #fff;
+  background: linear-gradient(90deg, #0072AD 18.23%, #0022A3 100%);
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: box-shadow 0.2s ease;
+}
+.form-contact form button:hover {
+  -webkit-box-shadow: 0px 4px 14px -2px rgba(255, 255, 255, 0.450); 
+  box-shadow: 0px 4px 14px -2px rgba(255,255,255,0.450);
+}
+
+/* FOOTER */
+
+footer {
+  padding: 0 38px;
+  height: 150px;
+  width: 100%;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #00061f;
+}
+footer .content-footer {
+  width: 1216px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer #credits {
+  color: #fff;
+}
+footer .nav-footer {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+footer .nav-footer a {
+  color: #fff;
+  font-size: 14px;
+}
+footer #logo-footer {
+  width: 48px;
+  height: 48px;
 }
