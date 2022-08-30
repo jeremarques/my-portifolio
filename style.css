@@ -52,7 +52,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
+  overflow: auto;
 }
 html,
 body {
@@ -326,7 +326,7 @@ section#projects .projects-box {
   margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 section#projects .projects-box .projects {
@@ -571,4 +571,91 @@ footer .nav-footer a {
 footer #logo-footer {
   width: 48px;
   height: 48px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  #logomarca-home img {
+    margin-right: 50px;
+  }
+  #avatar::after {
+    width: 252px;
+    height: 252px;
+  }
+  #avatar img {
+    width: 242px;
+    height: 242px;
+  }
+  #about-me #avatar-about-me {
+    margin: initial;
+  }
+  #about-me #avatar-about-me::after {
+    width: 252px;
+    height: 252px;
+  }
+  #about-me #avatar-about-me img {
+    width: 242px;
+    height: 242px;
+  }
+  #contact .logo-contact {
+    margin-top: 80px;
+    margin-left: 40px;
+  }
+  footer .nav-footer {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 680px) {
+  nav a + a {
+    margin-left: 1.2rem;
+  }
+  nav a {
+    font-size: 1.2rem;
+  }
+  nav #logomarca {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin: 0 2.4rem 0 2.4rem;
+  }
+  section#home {
+    margin-top: 80px;
+    padding: 52px 38px 52px 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #avatar {
+    display: none;
+  }
+  #logomarca-home img {
+    display: none;
+  }
+  #techs #content-techs #techs-icons {
+    gap: 32px;
+    margin-left: 140px;
+  }
+  section#projects .projects-box {
+    width: 100%;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  section#projects .projects-box .projects {
+    height: 190px;
+  }
+  .bg-projects {
+    height: 100%;
+  }
+  #about-me .content-about-me {
+    grid-template-columns: 1fr;
+  }
+  #about-me #avatar-about-me {
+    margin-top: 72px;
+    justify-content: center;
+  }
+  #about-me #avatar-about-me img {
+    margin-left: 5px;
+  }
 }
