@@ -482,6 +482,10 @@ section#projects .projects-box .projects .description-of-projects {
   margin-top: 80px;
   margin-left: 90px;
 } 
+#contact .logo-contact svg {
+  width: 300px;
+  height: auto;
+}
 #contact .logo-contact svg #logo-hover {
   transition: transform 0.5s ease;
 }
@@ -620,17 +624,41 @@ footer #logo-footer {
     margin: 0 2.4rem 0 2.4rem;
   }
   section#home {
-    margin-top: 80px;
-    padding: 52px 38px 52px 38px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    width: 100%;
+    padding-top: 0;
+  }
+  
+  #informations-home {
+    position: relative;
+    width: 100%;
+    margin-top: 70px;
   }
   #avatar {
-    display: none;
+    display: block;
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+  }
+  #avatar::after {
+    content: "";
+    position: absolute;
+    width: 232px;
+    height: 232px;
+    border-radius: 50%;
+    background: linear-gradient(141.1deg, #00B2FF 30.31%, #081976 87.04%);
+    z-index: -1;
+  }
+  #avatar img {
+    width: 222px;
+    height: 222px;
   }
   #logomarca-home img {
     display: none;
+  }
+  #techs #content-techs {
+    width: 90%;
+    overflow: hidden;
   }
   #techs #content-techs #techs-icons {
     gap: 32px;
@@ -648,8 +676,20 @@ footer #logo-footer {
   .bg-projects {
     height: 100%;
   }
+  #projects .view-projects {
+    margin-top: 58px;
+    margin-left: 17%;
+    padding-inline: 20px;
+    padding-block: 12px;
+    text-align: center;
+  }
+  #projects .view-projects a {
+    gap: 4px;
+    font-size: 14px;
+  }
   #about-me .content-about-me {
     grid-template-columns: 1fr;
+    margin-top: 32px;
   }
   #about-me #avatar-about-me {
     margin-top: 72px;
@@ -657,5 +697,36 @@ footer #logo-footer {
   }
   #about-me #avatar-about-me img {
     margin-left: 5px;
+  }
+
+  .content-contact {
+    display: flex;
+    flex-direction: column;
+  }
+  #contact .logo-contact {
+    display: none;
+  } 
+
+  footer .content-footer {
+    width: 1216px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer #credits {
+    color: #fff;
+  }
+  footer .nav-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-block: 20px;
+  }
+  footer .nav-footer a {
+    font-size: 14px;
+  }
+  footer #logo-footer {
+    width: 32px;
+    height: 32px;
   }
 }
